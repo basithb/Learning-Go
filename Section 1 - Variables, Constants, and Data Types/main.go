@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // global variables
 
 const url = "https://frontendmasters.com"
@@ -27,4 +29,12 @@ func main() {
 	var text string = "Going Gaga over Go"
 
 	print(y, z, text)
+
+	print(functionsText)
+
+	fmt.Println(" ")
+	fmt.Println("*******************************")
+	fmt.Println("Printing using fmt") // use fmt while printing stuff
+
+	PrintData()
 }
