@@ -13,4 +13,5 @@ var functionsText string = "This text can be used in main.go file since both fun
 func PrintData(){
 	fmt.Println("Printing from functions.go file")
 	fmt.Println("Printing MaxSpeed value from constants.go:", data.MaxSpeed)
+	fmt.Println("Printing Hobbies array from collections.go:", data.Hobbies)
 }
