@@ -14,4 +14,5 @@ func PrintData(){
 	fmt.Println("Printing from functions.go file")
 	fmt.Println("Printing MaxSpeed value from constants.go:", data.MaxSpeed)
 	fmt.Println("Printing Hobbies array from collections.go:", data.Hobbies)
+	fmt.Println("Printing NewHobbies array from collections.go:", data.NewHobbies)
 }

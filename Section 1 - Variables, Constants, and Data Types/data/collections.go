@@ -5,6 +5,8 @@ import "fmt"
 // collections in Go
 
 var Hobbies [5]string // arrays
+var NewHobbies = [2]string{"Programming", "Football"} // arrays
+
 var Slices []int // slices
 
 var Codes map[string]int // map; key-value pair
