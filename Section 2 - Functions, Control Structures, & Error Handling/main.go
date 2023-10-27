@@ -32,6 +32,12 @@ func taxWithName(price float32) (stateTax float32, cityTax float32){ // we are n
 	return // we don't have to explicitly mention the return values since it's already mentioned up top.
 }
 
+func birthday (pointerAge *int){
+	fmt.Printf("The pointer is %v and the pointer value is %v\n", pointerAge, *pointerAge) // fmt.Printf is used for template strings; %d for integers, %s for string and %v for values
+	*pointerAge += 1
+	
+}
+
 func main(){
 	sum := add(5,3)
 	additionResult, subtractionResult := addAndSubtract(5,3) // 2 variables are declared on the fly to store both the returned values from the 'addAndSubtract' function
@@ -46,6 +52,12 @@ func main(){
 	fmt.Println("City tax is: ", cityTax)
 	fmt.Println(stateTax2)
 
+	age := 22
+	birthday(&age) 
+
+	// why are we using pointers above? in Go, arguments are passed by value..  we would only be changing the copy of 'age' variable and not the variable itself. by doing this we are pointing to the original 'age' variable which we desire to mutate.
+	
+	fmt.Println("New age:", age)
 }
 
 
