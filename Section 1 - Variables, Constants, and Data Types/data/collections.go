@@ -4,7 +4,7 @@ import "fmt"
 
 // collections in Go
 
-var Hobbies [5]string // arrays
+var Hobbies [5]string                                 // arrays
 var NewHobbies = [2]string{"Programming", "Football"} // arrays
 
 var Slices []int // slices
@@ -22,6 +22,6 @@ func init() {
 	fmt.Println(lengthHobbiesArray, capacityOfSlices)
 }
 
-func init(){
+func init() {
 	fmt.Println("Another init function")
 }
