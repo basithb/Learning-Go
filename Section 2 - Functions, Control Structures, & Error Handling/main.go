@@ -33,12 +33,28 @@ func taxWithName(price float32) (stateTax float32, cityTax float32){ // we are n
 }
 
 func birthday (pointerAge *int){
+
+	if(*pointerAge > 60){
+		panic("Too old to be true") 
+		
+		// panic means an unexpected condition arises in your Go program due to which the execution of your program is terminated.
+
+		// any deferred functions are executed normally during the event of a panic.
+	}
+
 	fmt.Printf("The pointer is %v and the pointer value is %v\n", pointerAge, *pointerAge) // fmt.Printf is used for template strings; %d for integers, %s for string and %v for values
 	*pointerAge += 1
 	
 }
 
 func main(){
+
+	defer fmt.Println("first statement inside main() however due to 'defer' keyword it gets called towards the end")
+	defer fmt.Println("another defer")
+
+	// defer is commonly used to simplify functions that perform various clean-up actions. you can have multiple statements with defer.
+
+	fmt.Println("Main function output begins here")
 	sum := add(5,3)
 	additionResult, subtractionResult := addAndSubtract(5,3) // 2 variables are declared on the fly to store both the returned values from the 'addAndSubtract' function
 
