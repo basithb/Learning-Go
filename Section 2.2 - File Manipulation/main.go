@@ -13,11 +13,30 @@ func main() {
 
 	fmt.Println(rootPath)
 
-	content, err := fileUtils.ReadTextFile(rootPath + "/data/go.txt")
+	filePath := rootPath + "/data"
+	content, err := fileUtils.ReadTextFile(filePath + "/go.txt")
 
 	if err != nil {
 		fmt.Printf("Error %v", err)
 	} else {
 		fmt.Println(content)
 	}
+
+	insertContent := "This is some sample text that will be inside of new.txt file"
+	writeErr := fileUtils.WriteToFile(filePath+"/new.txt", insertContent)
+
+	if writeErr != nil {
+		fmt.Printf("Error %v", writeErr)
+
+	} else {
+		newTxtFileContent, newTxtFileErr := fileUtils.ReadTextFile(filePath + "/new.txt")
+
+		if newTxtFileErr != nil {
+			fmt.Println("Unable to read from file")
+		} else {
+			fmt.Println(newTxtFileContent)
+		}
+
+	}
+
 }
