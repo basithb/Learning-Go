@@ -9,6 +9,12 @@ import (
 
 func main() {
 
+	price := 50.23
+
+	stringPrice := fmt.Sprintf("%.2f", price) // Sprintf returns the resulting string; it does not print it to the console.
+
+	fmt.Printf("Printing price in string format using Sprintf %v\n", stringPrice)
+
 	rootPath, _ := os.Getwd() // gets the root directory and stores it in the 'rootPath' variable, we don't really require the returned error value from the Getwd() method so let's store it in '_'
 
 	fmt.Println(rootPath)
