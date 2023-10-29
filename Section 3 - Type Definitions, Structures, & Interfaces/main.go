@@ -11,4 +11,6 @@ func main() {
 	types.Testing()
 	fmt.Println("\n")
 	structs.TestStructs()
+	fmt.Println("\n")
+	structs.TestStructsWithMethods()
 }
